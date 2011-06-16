@@ -54,3 +54,8 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+#dialog-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
