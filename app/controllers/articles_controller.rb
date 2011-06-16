@@ -46,9 +46,11 @@ class ArticlesController < ApplicationController
       if @article.save
         format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
+        format.js
       end
     end
   end
