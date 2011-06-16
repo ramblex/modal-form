@@ -4,4 +4,6 @@
 <%- else %>
   console.log('Created');
   $('#dialog-form').dialog('close');
+  $('#dialog-form').remove();
+  $('table').append('<%= escape_javascript(render(@article)) %>');
 <%- end %>
