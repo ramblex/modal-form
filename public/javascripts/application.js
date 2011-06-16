@@ -6,10 +6,10 @@ $(document).ready(function() {
     var url = $(this).attr('href');
     var dialog_form = $('<div id="dialog-form">Loading form...</div>').dialog({
       autoOpen: false,
-      width: 360,
+      width: 520,
       modal: true,
       open: function() {
-        return $(this).load(url);
+        return $(this).load(url + ' #content');
       }
     });
     dialog_form.dialog('open');
