@@ -59,3 +59,15 @@ div.field, div.actions {
   border: 1px solid #ccc;
   padding: 20px;
 }
+
+.ui-widget {
+  background: white;
+}
+
+.ui-widget-overlay {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
