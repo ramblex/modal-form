@@ -10,6 +10,9 @@ $(document).ready(function() {
       modal: true,
       open: function() {
         return $(this).load(url + ' #content');
+      },
+      close: function() {
+        $('#dialog-form').remove();
       }
     });
     dialog_form.dialog('open');
