@@ -1,9 +1,10 @@
-<%- if @article.errors.any? %>
-  console.log('Error');
-  $('#dialog-form').html('<%= escape_javascript(render('form')) %>');
-<%- else %>
-  console.log('Created');
+<% if @article.valid? %>
   $('#dialog-form').dialog('close');
   $('#dialog-form').remove();
-  $('table').append('<%= escape_javascript(render(@article)) %>');
-<%- end %>
+
+  // Add the newly created article to the table
+  $('table tbody').append('<%= j render(@article) %>');
+<% else %>
+  // Validation failed, re-render the form showing the errors
+  $('#dialog-form').html('<%=j render("articles/form") %>')
+<% end %>
